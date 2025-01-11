@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --body-color: #fff;
+    --sidebar-color: #000;
+
+    /* Transisi */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.margarin{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.margarin2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.margarin2 button {
+    margin: 10px; /* Jarak antar tombol */
+}
+
+.margarin2 input,
+.margarin2 label,
+.margarin2 button {
+    margin-bottom: 20px; /* Tambahkan jarak antar elemen */
+    width: 100%; /* Agar input sesuai dengan container */
+}
+
+.margarin2 button {
+    max-width: 200px; /* Batasi lebar tombol */
+}
+
+
+.margarin2-content {
+    max-width: 100%; /* Konten tidak melebihi lebar container */
+    word-wrap: break-word; /* Memastikan teks panjang terpecah */
+    text-align: center; /* Menyelaraskan teks jika perlu */
+}
+
+@media (max-width: 768px) {
+    .margarin2 {
+        padding: 10px;
+    }
+
+    .margarin2 input {
+        font-size: 14px; /* Sesuaikan ukuran teks */
+    }
+
+    .margarin2 button {
+        width: 100%; /* Tombol menyesuaikan lebar container */
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar .logo a{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff; /* Optional hover effect */
+}
+
+
+/* =======Penyesuian Ukuran Platform============ */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+}
+
+/* ============================================= */
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+/* Menu Profil */
+.navi{
+    background: #1a1a1a;
+
+}
+
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+
+.bahan-ajar{
+    margin: auto;
+    z-index: 1;
+    display: absolute;
+}
+
+.card-body {
+    min-height: 150px; /* Atur sesuai kebutuhan */
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+  
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  /* Hover effect */
+  .dark-mode-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  /* Button styles for dark mode */
+  .dark-mode .dark-mode-toggle {
+    background-color: #333; /* Dark mode button color */
+    color: white;
+  }
+  
+  .dark-mode .dark-mode-toggle i {
+    color: yellow; /* Change icon color in dark mode */
+  }
+
+  /* Button styles for light mode */
+  .light-mode .dark-mode-toggle {
+    background-color: #fff; /* Light mode button color */
+    color: #333;
+  }
+
+  .light-mode .dark-mode-toggle i {
+    color: orange; /* Change icon color in light mode */
+  }
